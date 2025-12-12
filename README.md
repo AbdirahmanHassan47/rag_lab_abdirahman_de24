@@ -25,7 +25,7 @@ Systemet använder *retrieval augmented generation*:
 
 ## 📁 Projektstruktur
 
-.
+
 ├── backend/
 │   ├── data_models.py      # LanceDB-modeller (Transcript, Prompt, RagResponse)
 │   ├── rag.py              # RAG-agent, persona och retrieval-logik
