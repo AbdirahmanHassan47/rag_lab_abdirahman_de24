@@ -14,6 +14,7 @@ async def hello_message():
     summary="Ask the RAG chatbot",
     description="Send a question and receive an AI-generated answer based on the video transcripts.",
 )
+
 async def query_documentation(query: Prompt):
     result = await rag_agent.run(query.prompt)
     return result.output
