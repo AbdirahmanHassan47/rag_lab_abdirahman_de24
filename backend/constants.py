@@ -1,11 +1,6 @@
-
 from pathlib import Path
 
+DATA_PATH = Path(__file__).parents[1] / "data"
 
-ROOT_DIR = Path(__file__).parents[1]
+VECTOR_PATH = Path(__file__).parents[1] / "knowledge_base"
 
-
-DATA_PATH = ROOT_DIR / "data"
-
-
-VECTOR_DB_PATH = ROOT_DIR / "knowledge_base"
