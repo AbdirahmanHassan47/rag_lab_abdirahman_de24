@@ -27,20 +27,22 @@ Systemet använder *retrieval augmented generation*:
 
 .
 ├── backend/
-│ ├── constans.py # DATA_PATH, VECTOR_PATH
-│ ├── data_models.py # Transcript, Prompt, RagResponse
-│ ├── ingestion.py # Ingesta av markdown → LanceDB
-│ └── rag.py # RAG-agent + persona + retrieval
+│   ├── data_models.py      # LanceDB-modeller (Transcript, Prompt, RagResponse)
+│   ├── rag.py              # RAG-agent, persona och retrieval-logik
+│   └── constans.py         # DATA_PATH och VECTOR_PATH
 │
-├── data/ # Markdown-filer (YouTube-transkript)
+├── frontend/
+│   └── app.py              # Streamlit-chatgränssnitt
 │
-├── knowledge_base/ # Genereras av ingestion (LanceDB)
+├── api.py                  # FastAPI-backend med endpointen /rag/query
+├── ingestion.py            # Skapar LanceDB-databas från data/*.md (Task 0)
 │
-├── api.py # FastAPI-endpoint /rag/query
+├── data/                   # YouTube-transkript i markdown-format
+├── knowledge_base/         # Genereras automatiskt av ingestion (LanceDB)
 │
-└── frontend/
-└── app.py # Streamlit-chatgränssnitt
-
+├── .env                    # API-nycklar (GOOGLE_API_KEY)
+├── pyproject.toml / uv.lock
+└── README.md
 
 ---
 
