@@ -1,9 +1,5 @@
-fastapi
-uvicorn[standard]
-pydantic-ai
-lancedb
-google-generativeai
-python-dotenv
-streamlit
-ipykernel
-pandas
+# Uncomment to enable Azure Monitor OpenTelemetry
+# Ref: aka.ms/functions-azure-monitor-python
+# azure-monitor-opentelemetry
+
+azure-functions
